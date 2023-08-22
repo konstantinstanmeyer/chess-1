@@ -21,7 +21,7 @@ export default function Board({ color }: Props){
         <div className="flex flex-wrap w-80 h-80">
             {piecesArray.map((piece, i) => {
                 return (
-                    <div className={`bg-${getColor(i)} w-[12.5%] h-[12.5%] relative flex justify-center items-center`}>
+                    <div key={i} className={`bg-${getColor(i) as string} w-[12.5%] h-[12.5%] relative flex justify-center items-center`}>
                         {piece !== " " ? <img className={`${getSize(piece)}`} src={`${piece}.png`}/> : null}
                     </div>
                     // <div className={`bg-${getColor(i)} w-[12.5%] h-[12.5%] relative flex justify-center items-center`}>
